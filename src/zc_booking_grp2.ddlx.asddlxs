@@ -1,0 +1,25 @@
+@Metadata.layer: #CORE
+annotate view ZC_BOOKING_GRP2
+    with 
+{
+   @UI: {  lineItem: [ { position: 10 } ]}
+    BookingId;
+    @UI: {  lineItem: [ { position: 20 } ]}
+    UserId;
+    @UI: {  lineItem: [ { position: 30 } ]}
+    ScheduleId;
+    @UI: {  lineItem: [ { position: 40 } ]}
+    BookingDate;
+    @UI: {  lineItem: [ { position: 50 } ]}
+    BookingStatus;
+    @UI: {  lineItem: [ { position: 60 } ]}
+    SeatNumber;
+    @UI: {  lineItem: [ { position: 70 } ]}
+    WaitlistNumber;
+    /* Associations */
+    @UI: {  lineItem: [ { position: 80 } ]}
+    _Schedule;
+    @UI: {  lineItem: [ { position: 90 } ]}
+    _User;
+    
+}

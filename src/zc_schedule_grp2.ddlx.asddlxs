@@ -1,0 +1,33 @@
+@Metadata.layer: #CORE
+annotate view ZC_SCHEDULE_GRP2
+    with 
+{
+    @UI: {  lineItem: [ { position: 10 } ]}
+    ScheduleId;
+    @UI: {  lineItem: [ { position: 20 } ]}
+    BusId;
+     @UI: {  lineItem: [ { position: 30 } ]}
+    StartPoint;
+     @UI: {  lineItem: [ { position: 40 } ]}
+    EndPoint;
+     @UI: {  lineItem: [ { position: 50 } ]}
+    StartDate;
+     @UI: {  lineItem: [ { position: 60 } ]}
+    EndDate;
+     @UI: {  lineItem: [ { position: 70 } ]}
+    StartTime;
+     @UI: {  lineItem: [ { position: 80 } ]}
+    EndTime;
+     @UI: {  lineItem: [ { position: 90 } ]}
+    SeatsLeft;
+     @UI: {  lineItem: [ { position: 100 } ]}
+    CurrencyCode;
+     @UI: {  lineItem: [ { position: 110 } ]}
+    Fare;
+    /* Associations */
+     @UI: {  lineItem: [ { position: 120 } ]}
+    _Booking;
+     @UI: {  lineItem: [ { position: 130 } ]}
+    _Bus;
+    
+}
