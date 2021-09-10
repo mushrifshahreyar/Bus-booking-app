@@ -11,6 +11,7 @@ define view entity ZC_BOOKING_GRP2 as projection on ZI_BOOKING_GRP2 {
     BookingStatus,
     SeatNumber,
     WaitlistNumber,
+    _Schedule.StartPoint,
     /* Associations */
     _Schedule: redirected to parent ZC_SCHEDULE_GRP2,
     _User
