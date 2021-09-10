@@ -18,9 +18,13 @@ association to parent ZI_ET_BOOKING as _Booking on $projection.BookingUuid = _Bo
     contact_number as ContactNumber,
     passenger_status as PassengerStatus,
     waitlist_number as WaitlistNumber,
+    @Semantics.user.createdBy: true
     created_by as CreatedBy,
+    @Semantics.systemDateTime.createdAt: true
     created_at as CreatedAt,
+    @Semantics.user.lastChangedBy: true
     last_changed_by as LastChangedBy,
+    @Semantics.systemDateTime.lastChangedAt: true
     last_changed_at as LastChangedAt,
     _Booking
 }
