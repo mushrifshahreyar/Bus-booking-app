@@ -1,0 +1,38 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: { typeName: 'Booking',
+                typeNamePlural: 'Bookings',
+                title: { type: #STANDARD, label: 'Booking', value: 'BookingID' } },
+  presentationVariant: [{ sortOrder: [{ by: 'BookingID', direction:  #DESC }] }] }
+
+annotate view ZC_ET_BOOKING
+    with 
+{
+
+    @UI: { hidden: true }
+    BookingUuid;
+    @UI: {  lineItem:       [ { position: 10 } ]}
+    BookingId;
+    @UI: {  lineItem:       [ { position: 20 } ]}
+    BusId;
+    @UI: {  lineItem:       [ { position: 30 } ]}
+    StartPoint;
+    @UI: {  lineItem:       [ { position: 40 } ]}
+    EndPoint;
+    @UI: {  lineItem:       [ { position: 50 } ]}
+    StartDate;
+    @UI: {  lineItem:       [ { position: 60 } ]}
+    EndDate;
+    @UI: {  lineItem:       [ { position: 70 } ]}
+    BookingStatus;
+    @UI: {  lineItem:       [ { position: 80 } ]}
+    CreatedBy;
+    @UI: {  lineItem:       [ { position: 90 } ]}
+    CreatedAt;
+    @UI: {  lineItem:       [ { position: 100 } ]}
+    LastChangedBy;
+    @UI: {  lineItem:       [ { position: 110 } ]}
+    LastChangedAt;
+    
+}

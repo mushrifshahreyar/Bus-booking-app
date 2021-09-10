@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service defn for booking'
+define service ZUI_ET_BOOKING {
+  expose ZC_ET_BOOKING;
+  expose ZC_ET_PASENGER;
+}
