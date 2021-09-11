@@ -2,4 +2,5 @@
 define service ZUI_ET_BOOKING {
   expose ZC_ET_BOOKING;
   expose ZC_ET_PASENGER;
+  expose ZI_ET_BUSS;
 }

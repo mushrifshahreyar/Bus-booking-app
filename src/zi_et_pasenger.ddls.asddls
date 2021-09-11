@@ -1,12 +1,6 @@
-@AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Passenger BO view'
-@Metadata.ignorePropagatedAnnotations: true
-@ObjectModel.usageType:{
-    serviceQuality: #X,
-    sizeCategory: #S,
-    dataClass: #MIXED
-}
+
 define view entity ZI_ET_PASENGER as select from zet_tab_pasenger as Passenger
 association to parent ZI_ET_BOOKING as _Booking on $projection.BookingUuid = _Booking.BookingUuid
 {

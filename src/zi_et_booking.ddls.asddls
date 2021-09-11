@@ -1,12 +1,5 @@
-@AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Booking BO view'
-@Metadata.ignorePropagatedAnnotations: true
-@ObjectModel.usageType:{
-    serviceQuality: #X,
-    sizeCategory: #S,
-    dataClass: #MIXED
-}
 define root view entity ZI_ET_BOOKING as select from zet_tab_booking as Booking
 composition [0..*] of ZI_ET_PASENGER as _Passenger
 association [0..1] to ZI_ET_BUSS as _Bus on $projection.BusId = _Bus.BusId
@@ -14,10 +7,10 @@ association [0..1] to ZI_ET_BUSS as _Bus on $projection.BusId = _Bus.BusId
     key booking_uuid as BookingUuid,
     booking_id as BookingId,
     bus_id as BusId,
-    start_point as StartPoint,
-    end_point as EndPoint,
-    start_date as StartDate,
-    end_date as EndDate,
+    _Bus.StartPoint as StartPoint,
+    _Bus.EndPoint as EndPoint,
+    _Bus.StartDate as StartDate,
+    _Bus.EndDate as EndDate,
     booking_status as BookingStatus,
     @Semantics.user.createdBy: true
     created_by as CreatedBy,

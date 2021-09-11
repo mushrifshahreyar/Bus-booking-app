@@ -3,6 +3,7 @@
 {
 "FROM":
 [
+"ZI_ET_BUSS",
 "ZET_TAB_BOOKING"
 ],
 "ASSOCIATED":

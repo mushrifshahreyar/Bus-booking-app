@@ -1,13 +1,7 @@
-@AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Bus BO View'
-@Metadata.ignorePropagatedAnnotations: true
-@ObjectModel.usageType:{
-    serviceQuality: #X,
-    sizeCategory: #S,
-    dataClass: #MIXED
-}
-define view entity ZI_ET_BUSS as select from ZET_TAB_BUSS {
+
+define view entity ZI_ET_BUSS as select from zet_tab_buss {
     key bus_id as BusId,
     bus_name as BusName,
     bus_capacity as BusCapacity,
