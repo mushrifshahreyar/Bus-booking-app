@@ -9,6 +9,7 @@
 }
 define root view entity ZI_ET_BOOKING as select from zet_tab_booking as Booking
 composition [0..*] of ZI_ET_PASENGER as _Passenger
+association [0..1] to ZI_ET_BUSS as _Bus on $projection.BusId = _Bus.BusId
 {
     key booking_uuid as BookingUuid,
     booking_id as BookingId,
@@ -26,5 +27,6 @@ composition [0..*] of ZI_ET_PASENGER as _Passenger
     last_changed_by as LastChangedBy,
     @Semantics.systemDateTime.lastChangedAt: true
     last_changed_at as LastChangedAt,
-    _Passenger
+    _Passenger,
+    _Bus
 }

@@ -1,0 +1,67 @@
+managed implementation in class zbp_i_et_booking unique;
+strict;
+
+
+
+define behavior for ZI_ET_BOOKING alias Booking
+persistent table zet_tab_booking
+lock master
+authorization master ( instance )
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+  association _Passenger { create; }
+
+
+
+  mapping for ZET_TAB_BOOKING
+  {
+    BookingUuid = booking_uuid;
+    BookingId = booking_id;
+    BusId = bus_id;
+    StartPoint = start_point;
+    EndPoint = end_point;
+    StartDate = start_date;
+    EndDate = end_date;
+    BookingStatus = booking_status;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}
+
+
+
+define behavior for ZI_ET_PASENGER alias Passenger
+persistent table zet_tab_pasenger
+lock dependent by _Booking
+authorization dependent by _Booking
+etag master LastChangedAt
+{
+  update;
+  delete;
+  field ( readonly ) BookingUuid;
+  field ( numbering : managed, readonly ) PassengerUuid;
+  association _Booking;
+
+
+
+  mapping for zet_tab_pasenger
+  {
+    PassengerUuid = passenger_uuid;
+    BookingUuid = booking_uuid;
+    FirstName = first_name;
+    LastName = last_name;
+    Age = age;
+    ContactNumber = contact_number;
+    PassengerStatus = passenger_status;
+    WaitlistNumber = waitlist_number;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

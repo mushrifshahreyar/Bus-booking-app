@@ -13,18 +13,24 @@ annotate view ZC_ET_BOOKING
     @UI: { hidden: true }
     BookingUuid;
     @UI: {  lineItem:       [ { position: 10 } ]}
+    @UI.selectionField: [{position: 10 }]
     BookingId;
     @UI: {  lineItem:       [ { position: 20 } ]}
     BusId;
     @UI: {  lineItem:       [ { position: 30 } ]}
+    @UI.selectionField: [{position: 20 }]
     StartPoint;
     @UI: {  lineItem:       [ { position: 40 } ]}
+    @UI.selectionField: [{position: 40 }]
     EndPoint;
     @UI: {  lineItem:       [ { position: 50 } ]}
+    @UI.selectionField: [{position: 50 }]
     StartDate;
     @UI: {  lineItem:       [ { position: 60 } ]}
+    @UI.selectionField: [{position: 50 }]
     EndDate;
     @UI: {  lineItem:       [ { position: 70 } ]}
+    @UI.selectionField: [{position: 60 }]
     BookingStatus;
     @UI: {  lineItem:       [ { position: 80 } ]}
     CreatedBy;
@@ -33,6 +39,5 @@ annotate view ZC_ET_BOOKING
     @UI: {  lineItem:       [ { position: 100 } ]}
     LastChangedBy;
     @UI: {  lineItem:       [ { position: 110 } ]}
-    LastChangedAt;
-    
+    LastChangedAt;    
 }
